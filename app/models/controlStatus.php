@@ -22,7 +22,7 @@
         public static function getcurrentControlStatus(){
             //creating sql query
             $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
-            $sql = "SELECT * FROM control_status";
+            $sql = "SELECT status FROM control_status";
             $st = $conn->prepare( $sql );
             $st->execute();
             $row = $st->fetchAll(PDO::FETCH_ASSOC);

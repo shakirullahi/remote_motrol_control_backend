@@ -25,8 +25,7 @@ function getcurrentControlStatus(){
 	if($_SERVER["REQUEST_METHOD"] == "GET"){
 
         $control_status = ControlStatus::getcurrentControlStatus();
-
-        echo (json_encode($control_status,JSON_FORCE_OBJECT));
+        echo (json_encode($control_status[0]['status'],JSON_FORCE_OBJECT));
         return;	
 	}
 }
